@@ -1,0 +1,9 @@
+name: AcceptRulesBeforeJoinPlugin
+version: '${version}'
+
+main: com.acceptRulesBeforeJoinPlugin.AcceptRulesBeforeJoinPlugin
+paper-plugin-loader: com.acceptRulesBeforeJoinPlugin.AcceptRulesBeforeJoinPluginLoader
+api-version: '1.21.11'
+load: POSTWORLD
+
+authors: [ HueZhandouji ]

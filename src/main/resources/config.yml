@@ -1,0 +1,27 @@
+# 服务器规则对话框展示时间，如果超时将会关闭并断开玩家的连接。
+# 建议保存默认 60 秒的设置，如果设置时间太大可能因为线程耗尽导致性能问题
+waiting_seconds: 60
+# 在Paper事件系统中，对话框打开的优先级
+# 如果有其他插件在玩家配置阶段需要打开对话框，可以按需调整优先级
+# 优先级从最先打开到最后打开依次是:
+# LOWEST, LOW, NORMAL, HIGH, HIGHEST
+# 正常情况下保持默认即可
+dialog_priority: "HIGH"
+
+# =============================================
+# 对话框展示内容配置
+
+# 对话框标题
+title_text: "§l§6服务器准则"
+# 对话框主体内容，每一个元素代表一行文字
+body_texts:
+  - "========================================"
+  - "To access this server, you must accept following rules:"
+  - "在你加入服务器之前，你需要接受这些规则:"
+  - "1. Admit that Noel Cornehl's virginity has been lost to monsters."
+  - "1. 必须承认 诺艾尔-科涅尔 的除氯之身已经被魔族夺走。"
+  - "2. Acknowledge that Noel Cornehl is a good girl."
+  - "2. 承认 诺艾尔-科涅尔 是一个好女孩。"
+  - "3. Kawaisou wa kawaii."
+  - "3. 可怜即是可爱。"
+  - "========================================"

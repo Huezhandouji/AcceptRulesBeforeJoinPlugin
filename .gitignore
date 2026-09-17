@@ -1,0 +1,84 @@
+# ============================================================================
+# AcceptRulesBeforeJoinPlugin —— git 忽略规则
+# 覆盖：Java/Gradle 构建产物、Paper 服务端运行物、IDE、操作系统、临时文件、本地配置。
+# 注意：本文件不支持行尾注释（# 只有在行首才是注释），故所有说明均独立成行。
+# 提示：已被 git 跟踪的文件不受本文件影响；要停止跟踪需先执行 git rm --cached <路径>。
+# ============================================================================
+
+# ---------- Java / Gradle 构建产物 ----------
+build/
+out/
+target/
+bin/
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+.gradle/
+.kotlin/
+# 工作区内的 GRADLE_USER_HOME（构建缓存，不入库）
+.gradle-work/
+
+# ---------- 本地 / 机器相关配置 ----------
+# 含本机路径（pluginCopyPath 指向本机测试服）；构建脚本按“可选属性”处理，缺失不影响构建
+gradle.properties
+local.properties
+*.local
+.env
+.env.*
+!gradle/wrapper/gradle-wrapper.properties
+
+# ---------- Paper 服务端运行物 ----------
+run/
+server/
+plugins/
+logs/
+# 说明：docs/ 下的证据日志按约定用 git add -f 强制入库
+*.log
+eula.txt
+server.properties
+ops.json
+whitelist.json
+banned-ips.json
+banned-players.json
+usercache.json
+world/
+world_nether/
+world_the_end/
+
+# ---------- IDE ----------
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.project
+.classpath
+.factorypath
+*.code-workspace
+nbproject/
+
+# ---------- 操作系统 ----------
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ---------- 临时 / 崩溃转储 / 补丁残留 ----------
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+*.orig
+*.rej
+hs_err_pid*
+replay_pid*
+
+# ---------- 协作与工具产物 ----------
+.agent-teams/
+.scratch/
+.b-flow-scratch/
